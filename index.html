@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 131 – Fundamentos da Web Dinâmica - Ivan Luis Freitas de Carvalho</title>
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica - Ivan Luis Freitas de Carvalho - Página inicial do curso com links, informações pessoais e recursos web de desenvolvimento.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="estilos/base.css">
+    
+    <!-- JavaScript com Defer -->
+    <script src="scripts/obterdatas.js" defer></script>
 </head>
 <body>
-    
+
+    <header>
+        <span id="titulo-curso">WDD 131: Fundamentos da Web Dinâmica - Ivan Luis Freitas de Carvalho</span>
+        <nav>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7" target="_blank">Escritura</a>
+            <a href="#" target="_blank">Projeto Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Ivan Luis Freitas de Carvalho</h1>
+
+        <div class="grid-container">
+            <!-- Card 1: Sobre Mim -->
+            <section class="card">
+                <h2>Sobre Mim</h2>
+                <div class="sobre-conteudo">
+                    <p>Olá! Meu nome é Ivan e moro no Brasil. Sou apaixonado por tecnologia, desenvolvimento web e aprendizado contínuo. Este curso de Fundamentos da Web Dinâmica está sendo uma excelente oportunidade para aprimorar minhas habilidades em HTML, CSS e JavaScript.</p>
+                    <img src="imagens/perfil.jpg" alt="Foto de perfil de Ivan">
+                </div>
+                
+                <div class="local-info">
+                    <h3>Brasil</h3>
+                    <div class="local-detalhes">
+                        <img src="imagens/bandeira.png" alt="Bandeira do Brasil">
+                        <p>O Brasil é o maior país da América do Sul e da América Latina. É conhecido mundialmente por sua rica biodiversidade, cultura vibrante e monumentos icônicos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 2: Recursos Web Dev -->
+            <section class="card">
+                <h2>Recursos Web Dev</h2>
+                <ul class="recursos-lista">
+                    <li><a href="https://dev.to" target="_blank">Comunidade Dev.to</a></li>
+                    <li><a href="https://www.smashingmagazine.com" target="_blank">Revista Smashing</a></li>
+                    <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+                    <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+                    <li><a href="https://picsum.photos" target="_blank">Imagem de Espaço Reservado Lorem Picsum</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="anoatual"></span> ❖ Ivan Luis Freitas de Carvalho ❖ Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+
 </body>
 </html>
