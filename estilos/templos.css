@@ -1,0 +1,113 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* --- Cabeçalho e Botão Hambúrguer --- */
+header {
+    background-color: #4B1D6F; /* Roxo escuro inspirado nas imagens */
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#menu-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- Navegação Mobile --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #5D298A;
+}
+
+nav ul.escondido {
+    display: none; /* Esconde o menu inicialmente na visualização mobile */
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.ativo {
+    background-color: #3A1259;
+}
+
+/* --- Área Principal e Grid de 1 Coluna (Mobile) --- */
+main {
+    max-width: 1000px;
+    margin: 0 auto; /* Centraliza a página */
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 Coluna em dispositivos móveis */
+    gap: 2rem;
+}
+
+figure {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    display: block;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: 500;
+    color: #4B1D6F;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #4B1D6F;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}

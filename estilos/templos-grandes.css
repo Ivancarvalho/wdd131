@@ -1,0 +1,36 @@
+/* Media Query para telas maiores que 768px (Desktops e Tablets) */
+@media screen and (min-width: 768px) {
+    
+    /* Layout do Cabeçalho e Menu lado a lado */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .header-content {
+        padding: 1rem 0;
+    }
+
+    /* Esconde o botão de menu em telas grandes */
+    #menu-btn {
+        display: none;
+    }
+
+    /* Força o menu a aparecer mesmo se a classe 'escondido' estiver nele */
+    nav ul.escondido, nav ul {
+        display: flex !important; 
+        flex-direction: row; /* Coloca os itens horizontalmente */
+        background-color: transparent;
+    }
+
+    nav a {
+        padding: 1rem;
+    }
+
+    /* Altera a grade para 3 colunas */
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
