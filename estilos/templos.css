@@ -8,13 +8,13 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
-    color: #333;
+    color: #333333;
 }
 
 /* --- Cabeçalho e Botão Hambúrguer --- */
 header {
-    background-color: #4B1D6F; /* Roxo escuro inspirado nas imagens */
-    color: white;
+    background-color: #4B1D6F;
+    color: #ffffff;
 }
 
 .header-content {
@@ -24,13 +24,18 @@ header {
     padding: 1rem 2rem;
     font-size: 1.5rem;
     font-weight: bold;
+    color: #ffffff;
+}
+
+.header-content span {
+    color: #ffffff;
 }
 
 #menu-btn {
     font-size: 2rem;
     background: none;
     border: none;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -40,15 +45,20 @@ nav ul {
     display: flex;
     flex-direction: column;
     background-color: #5D298A;
+    color: #ffffff;
 }
 
 nav ul.escondido {
-    display: none; /* Esconde o menu inicialmente na visualização mobile */
+    display: none;
+}
+
+nav li {
+    color: #ffffff;
 }
 
 nav a {
     display: block;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 1rem 2rem;
     text-align: center;
@@ -57,12 +67,13 @@ nav a {
 
 nav a:hover, nav a.ativo {
     background-color: #3A1259;
+    color: #ffffff;
 }
 
 /* --- Área Principal e Grid de 1 Coluna (Mobile) --- */
 main {
     max-width: 1000px;
-    margin: 0 auto; /* Centraliza a página */
+    margin: 0 auto;
     padding: 2rem;
 }
 
@@ -70,13 +81,14 @@ h1 {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.8rem;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #cccccc;
     padding-bottom: 0.5rem;
+    color: #333333;
 }
 
 .galeria {
     display: grid;
-    grid-template-columns: 1fr; /* 1 Coluna em dispositivos móveis */
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
@@ -105,9 +117,13 @@ figcaption {
 /* --- Rodapé --- */
 footer {
     background-color: #4B1D6F;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem;
     margin-top: 2rem;
     font-size: 0.9rem;
+}
+
+footer p {
+    color: #ffffff;
 }
