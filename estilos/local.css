@@ -1,0 +1,129 @@
+/* Variáveis CSS Globais */
+:root {
+    --primary-color: #005A36;   /* Verde escuro com alto contraste */
+    --secondary-color: #003366; /* Azul marinho */
+    --accent-color: #D4A017;    /* Dourado para destaques */
+    --bg-light: #F4F6F9;        /* Fundo claro */
+    --text-dark: #222222;       /* Texto escuro legível */
+    --text-light: #FFFFFF;      /* Texto branco sobre fundos escuros */
+    --card-bg: #FFFFFF;
+    --border-color: #CCCCCC;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.hero-container {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Grid Layout (Mobile: 1 Coluna) */
+.conteudo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Cartões de Informação */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-top: 5px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #EEEEEE;
+}
+
+.card li:last-child {
+    border-bottom: none;
+}
+
+/* Clima - Configurações de Ícone para Mobile */
+.clima-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#clima-svg {
+    display: block; /* Visível no Mobile */
+}
+
+#clima-titulo::after {
+    content: ""; /* Vazio no Mobile */
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--accent-color);
+}
+
+footer p {
+    color: var(--text-light);
+    margin: 0.3rem 0;
+}

@@ -1,0 +1,18 @@
+/* Media Query para Telas Grandes (Desktop / Tablet) */
+@media screen and (min-width: 768px) {
+    /* Layout da Grade em 2 Colunas Lado a Lado */
+    .conteudo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Esconde o ícone SVG na visualização maior */
+    #clima-svg {
+        display: none !important;
+    }
+
+    /* Exibe o emoticon ⛅ via Pseudoelemento ::after no título "Clima" */
+    #clima-titulo::after {
+        content: " ⛅";
+        font-size: 1.4rem;
+    }
+}
