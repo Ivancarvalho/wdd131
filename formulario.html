@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de avaliação de produtos para a disciplina WDD 131.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+    <title>Avaliação do Produto | WDD 131</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS e JS -->
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/formulario.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Avaliação do Produto</h1>
+    </header>
+
+    <main>
+        <form method="get" action="avaliacao.html">
+            <!-- Nome do Produto -->
+            <div class="form-item">
+                <label for="produto">Nome do Produto <span class="req">*</span></label>
+                <select id="produto" name="produto" required>
+                    <option value="" disabled selected>Escolha um Produto ...</option>
+                </select>
+            </div>
+
+            <!-- Classificação Geral -->
+            <fieldset class="form-item rating-fieldset">
+                <legend>Classificação Geral <span class="req">*</span></legend>
+                <div class="rating-group">
+                    <div class="rating-option">
+                        <label for="star1">☆</label>
+                        <input type="radio" id="star1" name="classificacao" value="1" required>
+                    </div>
+                    <div class="rating-option">
+                        <label for="star2">☆☆</label>
+                        <input type="radio" id="star2" name="classificacao" value="2" required>
+                    </div>
+                    <div class="rating-option">
+                        <label for="star3">☆☆☆</label>
+                        <input type="radio" id="star3" name="classificacao" value="3" required>
+                    </div>
+                    <div class="rating-option">
+                        <label for="star4">☆☆☆☆</label>
+                        <input type="radio" id="star4" name="classificacao" value="4" required>
+                    </div>
+                    <div class="rating-option">
+                        <label for="star5">☆☆☆☆☆</label>
+                        <input type="radio" id="star5" name="classificacao" value="5" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Data de Instalação -->
+            <div class="form-item">
+                <label for="dataInstalacao">Data de Instalação <span class="req">*</span></label>
+                <input type="date" id="dataInstalacao" name="dataInstalacao" required>
+            </div>
+
+            <!-- Recursos Úteis -->
+            <fieldset class="form-item checkbox-fieldset">
+                <legend>Quais recursos você achou úteis no produto? <br><small><em>(Marque todos que se aplicam)</em></small></legend>
+                
+                <label class="checkbox-label" for="durabilidade">
+                    <input type="checkbox" id="durabilidade" name="recursos" value="durabilidade"> Durabilidade
+                </label>
+                
+                <label class="checkbox-label" for="facilidadeUso">
+                    <input type="checkbox" id="facilidadeUso" name="recursos" value="facilidadeUso"> Facilidade de Uso
+                </label>
+                
+                <label class="checkbox-label" for="desempenho">
+                    <input type="checkbox" id="desempenho" name="recursos" value="desempenho"> Desempenho
+                </label>
+
+                <label class="checkbox-label" for="design">
+                    <input type="checkbox" id="design" name="recursos" value="design"> Design
+                </label>
+            </fieldset>
+
+            <!-- Avaliação Escrita -->
+            <div class="form-item">
+                <label for="avaliacaoEscrita">Avaliação Escrita <span class="opt">(Opcional)</span></label>
+                <textarea id="avaliacaoEscrita" name="avaliacaoEscrita" rows="4"></textarea>
+            </div>
+
+            <!-- Seu Nome -->
+            <div class="form-item">
+                <label for="nomeUsuario">Seu Nome <span class="opt">(Opcional)</span></label>
+                <input type="text" id="nomeUsuario" name="nomeUsuario">
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="form-item">
+                <input type="submit" id="submitBtn" value="Publicar Avaliação">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> ❖ Ivan Luis Freitas de Carvalho ❖ WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

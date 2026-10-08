@@ -1,0 +1,211 @@
+:root {
+    --primary-color: #2b002c;
+    --secondary-color: #4a0e4e;
+    --accent-color: #3b003a;
+    --bg-card: #dcd4df;
+    --bg-body: #f5f5f7;
+    --text-color: #111111;
+    --white: #ffffff;
+    --focus-ring: #2b002c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.2rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+main {
+    flex: 1;
+    max-width: 480px;
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background-color: var(--bg-card);
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-item {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label, legend {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-color);
+}
+
+.req {
+    color: #b91c1c;
+    font-weight: bold;
+}
+
+.opt {
+    color: #4b5563;
+    font-weight: normal;
+    font-size: 0.85rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--white);
+    color: #000000;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 1px;
+}
+
+/* Fieldset e Estrelas */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 1.2rem 0;
+}
+
+.rating-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 0.2rem 0;
+}
+
+.rating-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating-option label {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.rating-option input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+/* Checkboxes */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    background-color: var(--white);
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-bottom: 0.4rem;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+}
+
+/* Botão de Envio */
+input[type="submit"],
+.btn-back {
+    background-color: #e5e5e5;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    border: 1px solid #888888;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:hover,
+.btn-back:hover {
+    background-color: #cccccc;
+}
+
+/* Página de Confirmação */
+.card-confirm {
+    text-align: center;
+    background-color: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: 6px;
+}
+
+.card-confirm h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.card-confirm hr {
+    margin: 1.2rem 0;
+    border: 0;
+    border-top: 1px solid #cccccc;
+}
+
+.counter-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.counter-text strong {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 0.3rem;
+}

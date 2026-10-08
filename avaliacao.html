@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de confirmação do envio de avaliação de produto.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+    <title>Avaliação Registrada | WDD 131</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/formulario.css">
+    <script src="scripts/avaliacao.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Obrigado pela sua Avaliação!</h1>
+    </header>
+
+    <main class="confirmation-container">
+        <section class="card-confirm">
+            <h2>Sua opinião foi enviada com sucesso!</h2>
+            <p>Agradecemos por dedicar seu tempo para avaliar nossos produtos.</p>
+            <hr>
+            <p class="counter-text">Total de avaliações enviadas neste navegador: <strong id="contadorAvaliacoes">0</strong></p>
+            
+            <a href="formulario.html" class="btn-back">Enviar Outra Avaliação</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> ❖ Ivan Luis Freitas de Carvalho ❖ WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
