@@ -209,3 +209,15 @@ footer {
 footer p {
     margin-bottom: 0.3rem;
 }
+
+/* Layout responsivo para telas maiores */
+@media screen and (min-width: 600px) {
+    main {
+        max-width: 580px;
+        padding: 2rem;
+    }
+
+    .rating-group {
+        justify-content: space-around;
+    }
+}
