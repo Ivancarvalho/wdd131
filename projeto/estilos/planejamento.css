@@ -1,0 +1,155 @@
+/* Variáveis CSS para Cores e Tipografia do Projeto */
+:root {
+    --primary-color: #1B4332;   /* Verde Floresta */
+    --secondary-color: #D97706; /* Laranja Aventura */
+    --neutral-dark: #212529;    /* Texto Escuro */
+    --neutral-light: #F8F9FA;   /* Fundo Claro */
+    --card-bg: #FFFFFF;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+    border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+/* Container Principal */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Seções / Cartões */
+section {
+    background-color: var(--card-bg);
+    border: 1px solid #E2E8F0;
+    border-left: 6px solid var(--primary-color);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--neutral-light);
+    padding-bottom: 0.5rem;
+}
+
+p, li {
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+}
+
+/* Seção de Esquema de Cores */
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-box {
+    flex: 1 1 200px;
+    padding: 1rem;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+.box-primary {
+    background-color: var(--primary-color);
+}
+
+.box-secondary {
+    background-color: var(--secondary-color);
+}
+
+.box-dark {
+    background-color: var(--neutral-dark);
+}
+
+.box-light {
+    background-color: #E2E8F0;
+    color: var(--neutral-dark);
+    border: 1px solid #CBD5E1;
+}
+
+/* Seção de Wireframes */
+.wireframe-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.wireframe-card {
+    text-align: center;
+}
+
+.wireframe-card img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    padding: 0.5rem;
+}
+
+/* Layout Responsivo para Wireframes */
+@media screen and (min-width: 768px) {
+    .wireframe-container {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border-top: 4px solid var(--secondary-color);
+    border-radius: 6px;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}

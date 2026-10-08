@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#f8f9fa" stroke="#cccccc" stroke-width="2"/>
+  <!-- Header -->
+  <rect x="15" y="15" width="770" height="60" fill="#1b4332" rx="4"/>
+  <text x="400" y="50" fill="#ffffff" font-family="sans-serif" font-size="18" text-anchor="middle">Header: Logo | Início | Trilhas | Contato</text>
+  <!-- Hero -->
+  <rect x="15" y="85" width="770" height="150" fill="#e2e8f0" rx="4"/>
+  <text x="400" y="165" fill="#475569" font-family="sans-serif" font-size="16" text-anchor="middle">[ Banner Principal - Imagem e Texto de Apresentação ]</text>
+  <!-- Grid Content -->
+  <rect x="15" y="245" width="245" height="170" fill="#ffffff" stroke="#d97706" stroke-width="2" rx="4"/>
+  <text x="137" y="335" fill="#212529" font-family="sans-serif" font-size="14" text-anchor="middle">Destaques da Semana</text>
+  <rect x="277" y="245" width="245" height="170" fill="#ffffff" stroke="#1b4332" stroke-width="2" rx="4"/>
+  <text x="400" y="335" fill="#212529" font-family="sans-serif" font-size="14" text-anchor="middle">Previsão do Clima</text>
+  <rect x="540" y="245" width="245" height="170" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4"/>
+  <text x="662" y="335" fill="#212529" font-family="sans-serif" font-size="14" text-anchor="middle">Dicas de Segurança</text>
+  <!-- Footer -->
+  <rect x="15" y="425" width="770" height="60" fill="#1b4332" rx="4"/>
+  <text x="400" y="460" fill="#ffffff" font-family="sans-serif" font-size="12" text-anchor="middle">Rodapé / Direitos Autorais / Links de Referência</text>
+</svg>
