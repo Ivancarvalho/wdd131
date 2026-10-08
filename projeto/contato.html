@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com nossa equipe ou inscreva-se em nossos grupos de caminhada ecoturística guiada.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+    <title>Trilhas & Aventura | Contato & Inscrição</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/site.css">
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/contato.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon">🥾</span>
+            <h1>Trilhas &amp; Aventura</h1>
+        </div>
+        <button id="menu-btn" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="trilhas.html">Explorar Trilhas</a></li>
+                <li><a href="contato.html" class="active">Contato &amp; Grupos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Inscrição em Grupos Guiados &amp; Contato</h2>
+            <p>Preencha os campos abaixo para tirar dúvidas ou agendar uma caminhada em grupo.</p>
+
+            <div id="feedback-message" class="hidden"></div>
+
+            <form id="contact-form" method="get" action="#">
+                <div class="form-group">
+                    <label for="nome">Nome Completo <span class="required">*</span></label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="trilhaInteresse">Trilha de Interesse <span class="required">*</span></label>
+                    <select id="trilhaInteresse" name="trilhaInteresse" required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        <option value="serra-azul">Trilha da Serra Azul</option>
+                        <option value="vale-verde">Vale Verde &amp; Cachoeiras</option>
+                        <option value="pico-agulhas">Pico das Agulhas</option>
+                        <option value="bosque-silencioso">Bosque Silencioso</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataPreferencia">Data de Preferência <span class="required">*</span></label>
+                    <input type="date" id="dataPreferencia" name="dataPreferencia" required>
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Nível de Experiência em Caminhadas <span class="required">*</span></legend>
+                    <label class="radio-label"><input type="radio" name="experiencia" value="iniciante" required> Iniciante</label>
+                    <label class="radio-label"><input type="radio" name="experiencia" value="intermediario"> Intermediário</label>
+                    <label class="radio-label"><input type="radio" name="experiencia" value="avancado"> Avançado</label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem ou Observações</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Alguma restrição física, dúvida ou solicitação especial?"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Inscrição</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> ❖ Ivan Luis Freitas de Carvalho ❖ WDD 131</p>
+        <p id="lastModified"></p>
+        <p><a href="referencias.html">Créditos e Referências</a></p>
+    </footer>
+</body>
+</html>

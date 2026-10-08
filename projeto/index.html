@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trilhas & Aventura - Seu guia interativo de ecoturismo, rotas de caminhada e aventuras na natureza.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+    <title>Trilhas &amp; Aventura | Início</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/site.css">
+    <script src="scripts/site.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon">🥾</span>
+            <h1>Trilhas &amp; Aventura</h1>
+        </div>
+        <button id="menu-btn" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="trilhas.html">Explorar Trilhas</a></li>
+                <li><a href="contato.html">Contato &amp; Grupos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Descubra Novas Rotas na Natureza</h2>
+                <p>Conectamos você às melhores rotas de caminhada, com informações detalhadas, mapa de dificuldade e grupos guiados.</p>
+                <a href="trilhas.html" class="btn-primary">Explorar Catalógo</a>
+            </div>
+        </section>
+
+        <section class="highlights-grid">
+            <article class="card">
+                <h3>Destaque da Semana</h3>
+                <img src="imagens/serra-azul.webp" alt="Trilha da Serra Azul" width="600" height="400" loading="lazy">
+                <h4>Trilha da Serra Azul</h4>
+                <p>Uma vista panorâmica inesquecível a 1.200m de altitude com mata preservada.</p>
+            </article>
+
+            <article class="card weather-card">
+                <h3>Painel Meteorológico</h3>
+                <div id="weather-info">
+                    <p class="temp">24°C</p>
+                    <p class="condition">☀️ Ensolarado — Condição ideal para caminhadas</p>
+                    <p class="humidity">Umidade Relativa: 58%</p>
+                    <p class="wind">Vento: 12 km/h SE</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="safety-section">
+            <h2>Dicas Essenciais de Segurança</h2>
+            <div class="safety-grid">
+                <div class="safety-item">
+                    <span class="icon">💧</span>
+                    <h4>Hidratação</h4>
+                    <p>Leve no mínimo 2 litros de água por pessoa para caminhadas curtas.</p>
+                </div>
+                <div class="safety-item">
+                    <span class="icon">👟</span>
+                    <h4>Calçado Adequado</h4>
+                    <p>Utilize botas ou tênis com solado aderente e meias de secagem rápida.</p>
+                </div>
+                <div class="safety-item">
+                    <span class="icon">📍</span>
+                    <h4>Planejamento</h4>
+                    <p>Avisar familiares sobre o roteiro e o horário estimado de retorno é fundamental.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> ❖ Ivan Luis Freitas de Carvalho ❖ WDD 131</p>
+        <p id="lastModified"></p>
+        <p><a href="referencias.html">Créditos e Referências</a></p>
+    </footer>
+</body>
+</html>

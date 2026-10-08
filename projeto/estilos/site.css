@@ -1,0 +1,426 @@
+/* ==========================================================================
+   Variáveis e Reset de CSS - Princípios PARC
+   ========================================================================== */
+:root {
+    --primary-color: #1B4332;   /* Verde Floresta */
+    --secondary-color: #D97706; /* Laranja Aventura */
+    --neutral-dark: #212529;    /* Texto Principal */
+    --neutral-light: #F8F9FA;   /* Fundo da Página */
+    --card-bg: #FFFFFF;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --transition-fast: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   Cabeçalho e Navegação Responsiva
+   ========================================================================== */
+header {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-container h1 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+}
+
+.logo-icon {
+    font-size: 1.6rem;
+}
+
+#menu-btn {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 100;
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   Conteúdo Principal & Layout
+   ========================================================================== */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+/* Banner Hero */
+.hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.8)),
+                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color var(--transition-fast);
+}
+
+.btn-primary:hover {
+    background-color: #b45309;
+}
+
+/* Grids */
+.highlights-grid,
+.safety-grid,
+.trails-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.25rem;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0.8rem 0;
+}
+
+.weather-card {
+    background-color: #E8F5E9;
+    border-left: 5px solid var(--primary-color);
+}
+
+.weather-card .temp {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.safety-section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.safety-section h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.safety-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.safety-item .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Filtros do Catálogo */
+.catalog-header {
+    margin-bottom: 1.5rem;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    border: 1px solid #CBD5E1;
+}
+
+.filter-bar select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #94A3B8;
+    font-family: var(--font-body);
+}
+
+.fav-badge {
+    margin-left: auto;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: #E2E8F0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+}
+
+/* Cartões de Trilhas */
+.trail-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.trail-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.trail-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.trail-content h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.badge-facil { color: #15803d; font-weight: bold; }
+.badge-moderada { color: #b45309; font-weight: bold; }
+.badge-dificil { color: #b91c1c; font-weight: bold; }
+
+.btn-fav {
+    margin-top: auto;
+    padding: 0.6rem;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all var(--transition-fast);
+}
+
+.btn-fav.active {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    border-color: var(--secondary-color);
+}
+
+/* Formulário */
+.form-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label, legend {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.required { color: #b91c1c; }
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+fieldset.form-group {
+    border: none;
+}
+
+.radio-label {
+    font-weight: normal;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color var(--transition-fast);
+}
+
+.btn-submit:hover {
+    background-color: #112a20;
+}
+
+#feedback-message {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    background-color: #D1E7DD;
+    color: #0F5132;
+    border: 1px solid #BADBCC;
+}
+
+.hidden { display: none; }
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #FCD34D;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Media Queries - Design Responsivo
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+    #menu-btn {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        border-top: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .safety-grid,
+    .trails-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .trails-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

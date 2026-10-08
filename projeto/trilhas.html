@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore o catálogo completo de trilhas ecológicas, filtre por nível de dificuldade e guarde suas rotas favoritas.">
+    <meta name="author" content="Ivan Luis Freitas de Carvalho">
+    <title>Trilhas & Aventura | Catálogo de Trilhas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/site.css">
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/trilhas.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon">🥾</span>
+            <h1>Trilhas &amp; Aventura</h1>
+        </div>
+        <button id="menu-btn" aria-label="Abrir menu de navegação">☰</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="trilhas.html" class="active">Explorar Trilhas</a></li>
+                <li><a href="contato.html">Contato &amp; Grupos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="catalog-header">
+            <h2>Catálogo de Trilhas Locais</h2>
+            <p>Utilize os filtros abaixo para escolher a aventura perfeita para seu nível de experiência.</p>
+            
+            <div class="filter-bar">
+                <label for="difficulty-filter">Filtrar por Dificuldade:</label>
+                <select id="difficulty-filter">
+                    <option value="todas">Todas as Dificuldades</option>
+                    <option value="facil">Fácil</option>
+                    <option value="moderada">Moderada</option>
+                    <option value="dificil">Difícil</option>
+                </select>
+                <div class="fav-badge">Favoritas Salvas: <span id="fav-count">0</span></div>
+            </div>
+        </section>
+
+        <section id="trails-container" class="trails-grid">
+            <!-- Renderizado dinamicamente via JavaScript (trilhas.js) -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> ❖ Ivan Luis Freitas de Carvalho ❖ WDD 131</p>
+        <p id="lastModified"></p>
+        <p><a href="referencias.html">Créditos e Referências</a></p>
+    </footer>
+</body>
+</html>
